@@ -1,0 +1,44 @@
+@import "@styles/common.scss";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #edf6f9;
+  .social-medias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    i {
+      font-size: 2rem;
+    }
+    .media-item {
+      margin: 0 0.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      text-align: center;
+      border: 1px solid $box-shadow-light;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all 0.2s ease-in-out;
+      i {
+        line-height: 3.5rem;
+      }
+      &:hover {
+        box-shadow: 0 0 4px $box-shadow-light;
+        i {
+          color: $primary-color;
+          // font-size: 2.2rem;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 0.9rem;
+    .version {
+      margin-left: 0.5rem;
+    }
+  }
+}

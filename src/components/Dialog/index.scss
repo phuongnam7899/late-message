@@ -1,0 +1,42 @@
+@import "@styles/common.scss";
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: showUp 0.2s ease-in-out;
+  z-index: 2;
+  .dialog-container {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgb(122, 122, 122);
+    border-radius: 2px;
+  }
+  .actions {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0.25rem 0.5rem;
+    width: 60vw;
+    button {
+      width: 1.75rem;
+      height: 1.75rem;
+      cursor: pointer;
+      background-color: $lightest-grey;
+      &:hover {
+        .fa-times {
+          color: $error;
+        }
+        .fa-download {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import "./styles/common.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $dark-color;
+  scroll-behavior: smooth;
+}
+
+// Scroll
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $box-shadow-dark;
+  border-radius: 4px;
+}
+
+button {
+    border: none
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+// Override React Slick css for text in slides to be selectable
+
+.slick-slider {
+  user-select: text !important;
+}
+.slick-list.draggable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none !important;
+}
+

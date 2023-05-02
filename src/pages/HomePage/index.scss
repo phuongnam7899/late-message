@@ -1,0 +1,45 @@
+$input-border-color: #ccc;
+$input-border-color-focus: #0077c0;
+$input-border-width: 2px;
+$button-border-color: $input-border-color;
+$button-border-color-focus: $input-border-color-focus;
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .login {
+    font-size: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    .form {
+      margin-top: 0.5rem;
+      width: 100%;
+      display: flex;
+      .password-input {
+        border: $input-border-width solid $input-border-color;
+        outline: none;
+        padding: 8px 12px;
+        font-size: 16px;
+        width: 100%;
+        transition: border-color 0.2s ease-in-out;
+
+        &:focus {
+          border-color: $input-border-color-focus;
+        }
+      }
+      .submit-button {
+        border: $input-border-width solid $button-border-color;
+        outline: none;
+        padding: 8px 12px;
+        font-size: 16px;
+        transition: border-color 0.2s ease-in-out;
+
+        &:focus {
+          border-color: $button-border-color-focus;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@keyframes rotateXZ {
+  from {
+  }
+  to {
+    transform: rotate3d(1, 0, 1, 360deg);
+  }
+}
+
+@keyframes spinThrough {
+  0% {
+    left: -60vw;
+    transform: rotate(-180deg);
+  }
+  40% {
+    transform: rotate(0deg);
+    left: -2vw;
+  }
+  60% {
+    transform: rotate(0deg);
+    left: -2vw;
+  }
+  100% {
+    left: 60vw;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

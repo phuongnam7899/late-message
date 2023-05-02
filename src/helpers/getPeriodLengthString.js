@@ -1,0 +1,1 @@
+const getPeriodLengthString = (startTime, endTIme) => {};
