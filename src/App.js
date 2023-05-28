@@ -23,6 +23,15 @@ export default function App() {
           <MainLayout>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route
+                path="/secret"
+                element={
+                  <div>
+                    Có cách nào để tin là anh muốn ngủ cùng với em không nhỉ,
+                    chỉ ngủ thôi
+                  </div>
+                }
+              />
             </Routes>
           </MainLayout>
         </AppContext.Provider>

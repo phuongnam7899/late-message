@@ -18,7 +18,10 @@ export const HomePage = () => {
     if (Number(loggedInTimeLeft) > 0)
       setLoggedInTimeLeft(Number(loggedInTimeLeft) - 1);
   }, []);
-  if (!localStorage.getItem("lateMessageUser"))
+  if (
+    localStorage.getItem("lateMessageUser") !== "V" &&
+    localStorage.getItem("lateMessageUser") !== "NN"
+  )
     return (
       <div className="home-page">
         <div>This site is only for Vy & Nam , get out!</div>
@@ -26,11 +29,20 @@ export const HomePage = () => {
     );
   return (
     <div className="home-page">
+      <img
+        src="https://lh3.googleusercontent.com/pw/AJFCJaWFhDR2hIuha-zZNniqUUm-3Y21xbppUPiMj1lrFAQ86PHGgN1ioALp7fJP5qpFZRW4Bd4FCpuoceK_uun1M8v-6O5N7N3tveos7BxS1K_30PXTy1yeg85k8qNdM9VCJ4injmccw2T_70gOZmbyLgI32w=w1774-h893-s-no"
+        style={{
+          position: "absolute",
+          top: "5vh",
+          left: "5vw",
+          width: "30px",
+        }}
+      />
       {Number(loggedInTimeLeft) <= 0 ? (
         <div className="login">
           <div>
             Prove u are{" "}
-            {localStorage.getItem("lateMessageUser") === "N"
+            {localStorage.getItem("lateMessageUser") === "NN"
               ? "nklm 🦊"
               : "Irene 🦈"}
             :
