@@ -27,8 +27,8 @@ export default function App() {
                 path="/secret"
                 element={
                   <div>
-                    Có cách nào để tin là anh muốn ngủ cùng với em không nhỉ,
-                    chỉ ngủ thôi
+                    Sang cho anh ôm đi ngủ đi:v Chỉ ôm đi ngủ với hít hít thôi,
+                    thật đấy:v
                   </div>
                 }
               />
