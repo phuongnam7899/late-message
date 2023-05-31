@@ -14,7 +14,8 @@ $button-padding: 8px 16px;
 $button-font-size: 16px;
 $button-font-family: Arial, sans-serif;
 $cadet-gray: #80989cff;
-$columbia-blue: rgb(217, 224, 226);
+$columbia-blue: rgb(204, 215, 218);
+$my-message: #f7f6ee;
 
 .calendar {
   display: flex;
@@ -81,6 +82,7 @@ $columbia-blue: rgb(217, 224, 226);
       margin-bottom: 0.5rem;
       &.me {
         align-self: flex-end;
+        background-color: $my-message;
       }
       .content {
         margin-bottom: 0.5rem;
