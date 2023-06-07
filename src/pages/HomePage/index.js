@@ -18,15 +18,9 @@ export const HomePage = () => {
     if (Number(loggedInTimeLeft) > 0)
       setLoggedInTimeLeft(Number(loggedInTimeLeft) - 1);
   }, []);
-  if (
+  const noUser =
     localStorage.getItem("lateMessageUser") !== "V" &&
-    localStorage.getItem("lateMessageUser") !== "NN"
-  )
-    return (
-      <div className="home-page">
-        <div>This site is only for Vy & Nam , get out!</div>
-      </div>
-    );
+    localStorage.getItem("lateMessageUser") !== "NN";
   return (
     <div className="home-page">
       <img
@@ -38,7 +32,7 @@ export const HomePage = () => {
           width: "30px",
         }}
       />
-      {Number(loggedInTimeLeft) <= 0 ? (
+      {!noUser && Number(loggedInTimeLeft) <= 0 ? (
         <div className="login">
           <div>
             Prove u are{" "}
@@ -74,7 +68,7 @@ export const HomePage = () => {
           </div>
         </div>
       ) : (
-        <Calendar />
+        <Calendar noUser={noUser} />
       )}
     </div>
   );

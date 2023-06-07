@@ -6,7 +6,7 @@ import { firebaseFirestore } from "src/firebase";
 import _ from "lodash";
 import { log } from "@craco/craco/lib/logger";
 
-const Calendar = ({ selectedDay }) => {
+const Calendar = ({ noUser }) => {
   // Initialize state with current date
   const [date, setDate] = useState(new Date());
   const [allMessages, setAllMessages] = useState([]);
@@ -22,7 +22,9 @@ const Calendar = ({ selectedDay }) => {
       console.log(now.month());
       console.log(item.month);
 
-      const canSee = isPreviousMonth || item.owner === currentUser;
+      const canSee = noUser
+        ? isPreviousMonth
+        : isPreviousMonth || item.owner === currentUser;
       return (
         item.year === selectedDate.year() &&
         item.month === selectedDate.month() &&

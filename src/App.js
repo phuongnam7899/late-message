@@ -3,7 +3,7 @@ import { CommingSoon, MainLayout } from "./components";
 import { HomePage } from "./pages";
 import { Worker } from "@react-pdf-viewer/core";
 import "./App.scss";
-import { useWindowSize } from "./hooks";
+import { useLocalStorage, useWindowSize } from "./hooks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./i18n";
@@ -14,8 +14,6 @@ export default function App() {
   const { t, i18n } = useTranslation();
   const { width } = useWindowSize();
 
-  // if (width <= 425)
-  //   return <CommingSoon customMessage={t("mobileUIBeingUpdated")} />;
   return (
     <BrowserRouter>
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.13.216/build/pdf.worker.min.js">
