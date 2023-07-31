@@ -22,9 +22,7 @@ const Calendar = ({ noUser }) => {
       console.log(now.month());
       console.log(item.month);
 
-      const canSee = noUser
-        ? isPreviousMonth
-        : isPreviousMonth || item.owner === currentUser;
+      const canSee = true;
       return (
         item.year === selectedDate.year() &&
         item.month === selectedDate.month() &&
