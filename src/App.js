@@ -9,10 +9,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "./i18n";
 import { useTranslation } from "react-i18next";
 import { AppContext } from "./context";
+import dayjs from "dayjs";
 
 export default function App() {
   const { t, i18n } = useTranslation();
   const { width } = useWindowSize();
+  if (dayjs().isBefore("2023-08-06T00:00:00.167Z")) {
+    return "Hãy quay lại vào mùng 6";
+  }
 
   return (
     <BrowserRouter>
